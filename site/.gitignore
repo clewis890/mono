@@ -27,4 +27,3 @@ yarn-error.log*
 /dist
 /.next
 
-next.config.js
