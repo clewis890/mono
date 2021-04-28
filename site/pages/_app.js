@@ -22,7 +22,7 @@ import Head from "next/head";
 import Router from "next/router";
 import { createContext } from "react"
 import PageChange from "components/PageChange/PageChange.js";
-import "assets/scss/nextjs-material-kit.scss?v=1.1.0";
+import "./assets/scss/nextjs-material-kit.scss?v=1.1.0";
 
 // Router.events.on('routeChangeStart', () => NProgress.start());
 // Router.events.on('routeChangeComplete', () => NProgress.done());
