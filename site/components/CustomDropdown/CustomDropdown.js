@@ -85,6 +85,8 @@ export default function CustomDropdown(props) {
     <div>
       <div>
         <Button
+          style={{ fontFamily: `'EB Garamond', serif`,
+        }}
           aria-label="Notifications"
           aria-owns={anchorEl ? "menu-list" : null}
           aria-haspopup="true"

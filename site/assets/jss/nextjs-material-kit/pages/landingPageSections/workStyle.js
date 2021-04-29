@@ -8,23 +8,37 @@ const workStyle = {
   },
   title: {
     ...title,
+    fontFamily: 'EB Garamond, serif',
     color: '#010103',
-    marginBottom: "40px",
-    marginTop: "30px",
+    marginBottom: "30px",
+    marginTop: "40px",
     minHeight: "32px",
     textDecoration: "none",
-    textAlign: "center"
+    textAlign: "center",
+    // fontSize: '2em',
   },
   container: {
     width: '100%',
+    margin: '0 auto',
   },
   description: {
+    width: '100%',
+    fontWeight: '400',
+    fontFamily: 'Tenor Sans, sans-serif',   
     fontSize: '1em',
     color: "#010103",
     textAlign: "center",
-    fontWeight: '300',
-    marginBottom: "40px",
+    // wordSpacing: '3px',
+    // letterSpacing: '2px',
+    lineHeight: '30px',
+    marginBottom: "30px auto",
     padding: '15px',
+    backgroundColor: 'lightslategray',
+
+   
+   
+
+
   },
   formContainer: {
     display: 'flex',
@@ -46,6 +60,7 @@ const workStyle = {
     margin: '10px',
   },
   input : {
+    fontFamily: 'Roboto Slab',
     fontWeight: '700',
     fontSize: '0.9em',
     border: 'none',

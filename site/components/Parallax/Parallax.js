@@ -12,7 +12,7 @@ import styles from "assets/jss/nextjs-material-kit/components/parallaxStyle.js";
 const useStyles = makeStyles(styles);
 
 export default function Parallax(props) {
-  let windowScrollTop;
+  // let windowScrollTop;
   // if (window.innerWidth >= 768) {
   //   windowScrollTop = window.pageYOffset / 3;
   // } else {
@@ -51,14 +51,7 @@ export default function Parallax(props) {
     [className]: className !== undefined
   });
   return (
-    <div
-      className={parallaxClasses}
-      style={{
-        ...style,
-        backgroundImage: "url(" + image + ")",
-        transform: transform
-      }}
-    >
+    <div className={parallaxClasses} style={{...style, backgroundImage: "url(" + image + ")", transform: transform}}>
       {children}
     </div>
   );

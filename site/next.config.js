@@ -5,13 +5,14 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = withPlugins([[withSass], [withImages]], {
-  webpack(config, options) {
-    config.resolve.modules.push(path.resolve("./"));
-    return config;
-  },
   env: {
     TEMPLATE_ID: 'template_fiq8ay6',
     EMAILJS_USER_ID: 'user_52DVySDrVoAFY5uEbQliT',
+    BLOG_URL: 'https://www.dablonyc.com'
+  },
+  webpack(config, options) {
+    config.resolve.modules.push(path.resolve("./"));
+    return config;
   },
   async rewrites() {
     return [
@@ -21,11 +22,11 @@ module.exports = withPlugins([[withSass], [withImages]], {
       },
       {
         source: '/blog',
-        destination: `https://www.dablonyc.com/blog`,
+        destination: `${BLOG_URL}/blog`,
       },
       {
         source: '/blog/:path*',
-        destination: `https://www.dablonyc.com/blog/:path*`,
+        destination: `${BLOG_URL}/blog/:path*`,
       },
     ];
   },

@@ -33,7 +33,7 @@ export default function Law(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="DAB Law Office, P.C."
+        brand="Home"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -45,14 +45,16 @@ export default function Law(props) {
       <Parallax filter responsive image={require("assets/img/newyork-unsplash.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>David Augustus Ball, Esquire.</h1>
+            <GridItem xs={12} sm={12} md={6} style={{ display: 'contents' }}>
+              <h1 className={classes.title}>DAB Law Office, P.C.</h1>
               <br />
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classNames(classes.main, classes.mainRaised)}
+      style={{ backgroundColor: 'ivory' }}
+      >
         <div className={classes.container}>
         <Writing />
         </div>

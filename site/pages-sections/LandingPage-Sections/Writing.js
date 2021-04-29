@@ -36,31 +36,48 @@ export default function Writing() {
     const classes = useStyles();
 
     return (
-        <div className={classes.section}>
+        <div className={classes.section} style={{ }} >
             <h2 className={classes.title}>Writing</h2>
-            <GridContainer justify="center" style={{ backdropFilter: 'blur(7px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <GridItem xs={10} lg={8}>
+            <GridContainer justify="center" style={{ 
+                // backgroundImage: 'url(https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVhZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)',
+                backdropFilter: 'blur(7px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                    <GridItem xs={10} lg={8}
+                  style={{  padding: '20px', margin: 'auto' }}
+                    >
                         <h5 className={classes.description}>
                             David is the author of Tryptich (Andalus Publishing, 2017), currently for sale on Amazon.
                         </h5>
-                    </GridItem>
-                    <GridItem xs={10} md={8} lg={10}>
-                        <h5 className={classes.description}>
                         <Button
-                        color="warning"
+                        color="success"
                         >
                         <a 
                         href="https://www.amazon.com/Triptych-David-Augustus-Ball/dp/1945979011"
                         target="_blank"
                         noopener="true"
                         noreferrer="true"
-                        style={{ color: '#010103', fontWeight: '600', fontSize: '1.2em' }}
+                        style={{ color: 'ivory', fontWeight: '500', fontSize: '1.2em' }}
+                        >
+                            Buy Tryptich <br />Now on Amazon!
+                        </a>
+                        </Button> 
+                    </GridItem>
+                    {/* <GridItem xs={10} md={8} lg={10}>
+                        <h5 className={classes.description}>
+                        <Button
+                        color="success"
+                        >
+                        <a 
+                        href="https://www.amazon.com/Triptych-David-Augustus-Ball/dp/1945979011"
+                        target="_blank"
+                        noopener="true"
+                        noreferrer="true"
+                        style={{ color: 'ivory', fontWeight: '500', fontSize: '1.2em' }}
                         >
                             Buy Tryptich <br />Now on Amazon!
                         </a>
                         </Button> 
                         </h5>
-                    </GridItem>
+                    </GridItem> */}
                     <GridItem xs={10} md={8} lg={10}>
                         <h5 className={classes.description}>
                            

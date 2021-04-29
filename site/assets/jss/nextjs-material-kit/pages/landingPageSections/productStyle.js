@@ -31,7 +31,7 @@ const productStyle ={
     fontSize: '1.1rem',
   },
   list: {
-    fontFamily: 'Garamond',
+    fontFamily: 'Roboto',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

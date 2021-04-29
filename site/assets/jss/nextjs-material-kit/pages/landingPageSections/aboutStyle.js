@@ -15,6 +15,7 @@ const aboutStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none",
+    // textShadow: '1px 2px 8px black',
   },
   ...imagesStyle,
   itemGrid: {
@@ -31,14 +32,15 @@ const aboutStyle = {
     display: 'flex',
   },
   aboutsection: {
-   
+    // display: 'flex',
+    // // alignItems: 'center',
   },
   description: {
     wordSpacing: '3px',
     letterSpacing: '2px',
     lineHeight: '30px',
     padding: '15px',
-    fontFamily: 'Garamond',
+    fontFamily: `'EB Garamond', serif`,
     display: 'flex',
     alignItems: 'center',
     margin: "15px auto",

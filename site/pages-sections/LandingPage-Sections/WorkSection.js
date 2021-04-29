@@ -2,7 +2,6 @@ import React, { useState, useReducer, useRef } from "react";
 import { useForm } from 'react-hook-form'
 import emailjs from 'emailjs-com'
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/workStyle.js";
-import PropTypes from 'prop-types'
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Slide from "@material-ui/core/Slide";
@@ -58,12 +57,15 @@ function reducer(state, action) {
   }
 }
 
-export default function WorkSection() {
+export default function WorkSection({ env }) {
   const [formState, dispatch] = useReducer(reducer, initialState); 
   const [classicModal, setClassicModal] = React.useState(false);
   const { register, handleSubmit, watch, errors } = useForm();
-  // const [formSubmitted, setFormSubmitted] = useState(false);
-  // const [formSubmitSuccessful, setFormSubmitSuccessful] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitSuccessful, setFormSubmitSuccessful] = useState(false);
   const [statusMessage, setStatusMessage] = useState(" ");
 
   const classes = useStyles();
@@ -71,13 +73,13 @@ export default function WorkSection() {
     // User can see how many characters they can type, out of
     // the 1500 limit
   const message_html = watch('message_html') || "";
-  const messageCharsLeft = 1500 - message_html.length;
+  const messageCharsLeft = 500 - message_html.length;
 
-  function sendEmail(e) {    
+  function sendEmail(e, icon, title) {    
     e.preventDefault();
 
-    emailjs.sendForm('gmail', process.env.TEMPLATE_ID, e.target, process.env.USER_ID )
-      .then(() => {  
+    emailjs.sendForm('gmail', process.env.TEMPLATE_ID, e.target, process.env.USER_ID)
+      .then((result) => {  
         setClassicModal(false);
         Swal.fire({
           timer: 10000,
@@ -86,7 +88,7 @@ export default function WorkSection() {
           title: 'Thanks!',
           text: 'Your message has been sent successfully!',
         });
-      }, () => {
+      }, (error) => {
           setClassicModal(false);
           Swal.fire({
             timer: 10000,
@@ -102,8 +104,8 @@ export default function WorkSection() {
   return (
     <div className={classes.section} style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
       <GridContainer justify="center" className={classes.container}>
-        <GridItem xs={12} sm={12} md={8} lg={6} 
-          style={{ backgroundColor: '#d6e0eb', borderRadius: '6px', padding: '20px, 5px, 25px, 5px', margin: '15px, 5px' }}>
+        <GridItem xs={12} sm={12} md={10} lg={12} 
+          style={{ backgroundColor: 'lightslategray', boxShadow: '1px 2px 8px black', borderRadius: '6px', padding: '20px, 5px, 25px, 5px', margin: '15px, 5px' }}>
           <h2 className={classes.title}>Contact Me</h2>
             <p className={classes.description}>
               Send me a summary of your case, and I will reach out 
@@ -199,7 +201,7 @@ export default function WorkSection() {
                             className={classes.input}
                             placeholder="Summary of Your Case"
                             id="message"
-                            maxLength='1500'
+                            maxLength='500'
                             fullwidth="true"
                             autoresize="true"
                             rows='5'
@@ -217,7 +219,7 @@ export default function WorkSection() {
                           <p className="message-chars-left">{messageCharsLeft}</p>
                           </GridItem>
                           <DialogActions className={classes.modalFooter}>
-                            <p style={{ backgroundColor: 'unset', fontFamily: 'Roboto', padding: '12px', borderRadius: '6px', fontSize: '1.2em', color: 'yellow', textShadow: '2px 1px 5px black', fontWeight: '700', textTransform: 'uppercase' }} className="status-message">{statusMessage}</p>
+                            <p style={{ backgroundColor: 'unset', fontFamily: 'Garamond', padding: '12px', borderRadius: '6px', fontSize: '1.2em', color: 'yellow', textShadow: '2px 1px 5px black', fontWeight: '700', textTransform: 'uppercase' }} className="status-message">{statusMessage}</p>
                               <button 
                                 type="submit" 
                                 className={classes.close}

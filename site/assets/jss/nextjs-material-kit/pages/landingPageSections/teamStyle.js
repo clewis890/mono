@@ -24,7 +24,7 @@ const teamStyle = {
     margin: "1.75rem 10px 0.875rem",
     textDecoration: "none",
     fontWeight: "700",
-    fontFamily: `Garamond`,
+    fontFamily: `'EB Garamond', serif`,
     fontSize: '2em',
   },
   smallTitle: {
@@ -38,16 +38,19 @@ const teamStyle = {
   },
   description: {
     color: "#010103",
+    fontWeight: '400',
+    fontFamily: 'Tenor Sans, sans-serif',    
     margin: "30px auto",
     width: "100%",
     textAlign: 'left',
     wordSpacing: '3px',
     letterSpacing: '2px',
     lineHeight: '30px',
-    backgroundColor: '#d6e0eb',
-    // backdropFilter:' blur(10px)',
+    backgroundColor: 'lightslategray',
     padding: '15px',
     borderRadius: '6px',
+    boxShadow: '1px 3px 8px #777',
+    fontSize: '1em',
   },
   justifyCenter: {
     justifyContent: "center !important"
@@ -65,7 +68,19 @@ const teamStyle = {
   },
   margin5: {
     margin: "5px"
-  }
+  },
+  '@media (max-width: 768px)': {
+    description: {
+      fontSize: '0.85em',
+    },
+  },
+  '@media (max-width: 500px)': {
+    description: {
+      fontSize: '0.9em',
+      wordSpacing: '0',
+      letterSpacing: '0',
+    },
+  },
 };
 
 export default teamStyle;

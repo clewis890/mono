@@ -21,12 +21,12 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 import { createContext } from "react"
-import PageChange from "components/PageChange/PageChange.js";
-import "./assets/scss/nextjs-material-kit.scss?v=1.1.0";
+import { getStrapiMedia } from "../lib/media"
+import { fetchAPI } from "../lib/api"
 
-// Router.events.on('routeChangeStart', () => NProgress.start());
-// Router.events.on('routeChangeComplete', () => NProgress.done());
-// Router.events.on('routeChangeError', () => NProgress.done());
+import PageChange from "components/PageChange/PageChange.js";
+
+import "assets/scss/nextjs-material-kit.scss?v=1.1.0";
 
 export const GlobalContext = createContext({});
 
@@ -85,6 +85,10 @@ export default class MyApp extends App {
       <React.Fragment>
         <Head>
           <title>DAB Law Office, P.C.</title>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Tenor+Sans&display=swap" rel="stylesheet"></link>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
         </Head>
         <Component {...pageProps} />
       </React.Fragment>

@@ -19,7 +19,7 @@ export default function ContactForm() {
     const message = watch('message') || "";
     const messageCharsLeft = 1500 - message.length;
 
-    const onSubmit = data => { console.log(data); };
+    const onSubmit = data => { console.log(data) }
 
     function sendEmail(e) {
       e.preventDefault();
@@ -42,8 +42,7 @@ export default function ContactForm() {
           <div>
           <title>{title}</title>
             <form 
-            // onSubmit={handleSubmit(onSubmit)}
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit(onSubmit)}
             >
             <GridContainer className={classes.formContainer}>
               <GridItem xs={12} sm={12} md={6}>

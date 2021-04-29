@@ -1,4 +1,5 @@
 import React from "react";
+
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Divider from "@material-ui/core/Divider";
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "30px",
         minHeight: "32px",
         textDecoration: "none",
+        fontFamily: `'EB Garamond', serif`,
         // textShadow: '1px 2px 8px black',
     },
     // ...imagesStyle,
@@ -43,27 +45,29 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     aboutsection: {
-        // display: 'flex',
-        // // alignItems: 'center',
+        height: 'fit-content',
     },
     description: {
+        fontFamily: 'Tenor Sans, sans-serif',    
+        fontWeight: '400',
         wordSpacing: '3px',
         letterSpacing: '2px',
         lineHeight: '30px',
         padding: '15px',
-        fontFamily: 'Roboto',
         display: 'flex',
         alignItems: 'center',
         margin: "15px auto",
         width: "100%",
         textAlign: 'left',
         backdropFilter: 'blur(10px)',
-        backgroundColor: 'rgba(32, 74, 85)',
-        color: '#fff',
+        backgroundColor: 'lightslategray',
+        boxShadow: '1px 3px 8px #777',
+        color: '#000',
         borderRadius: '6px',
         [theme.breakpoints.down('xs')]: {
             letterSpacing: '0.5px',
             wordSpacing: '1px',
+            boxShadow: 'none',
         },
     },
     justifyCenter: {
@@ -89,13 +93,18 @@ const HtmlTooltip = withStyles((theme) => ({
     tooltip: {
       padding: '15px',
       backgroundColor: '#eaeaea',
+      margin: '15px 50px',
       color: '#010103',
       maxWidth: 340,
+      fontFamily: 'EB Garamond, serif',
       fontSize: theme.typography.pxToRem(14),
       border: '1px solid #dadde9',
       boxShadow: 
-      '1px 2px 3px 8px, 1.4px 5px 4px 9px 0.07, 2.2px 7px 6.4px 11px 0.075, 2.8px 8.8px 7.5px 14.3px 0.054'
-    },
+      '1px 2px 3px 8px, 1.4px 5px 4px 9px 0.07, 2.2px 7px 6.4px 11px 0.075, 2.8px 8.8px 7.5px 14.3px 0.054',
+      '&:hover': {
+        boxShadow: '1px 3px 8px #000',
+      },
+    }, 
   }))(Tooltip);
 
 export default function AboutSection() {
@@ -127,7 +136,9 @@ export default function AboutSection() {
                         Ladies of Haiti and Nicaragua during their visits to the Crescent City.
                         </h5>
                         
-                        <GridItem item xs={4} sm={4}  lg={6} style={{height: 'fit-content'}} className={classes.aboutsection}>     
+                        <GridItem item xs={4} sm={4} lg={6} 
+                        // style={{height: 'fit-content'}} 
+                        className={classes.aboutsection}>     
                         <HtmlTooltip
                         placement= "right"
                         interactive
