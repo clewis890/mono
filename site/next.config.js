@@ -8,7 +8,7 @@ module.exports = withPlugins([[withSass], [withImages]], {
   env: {
     TEMPLATE_ID: 'template_fiq8ay6',
     EMAILJS_USER_ID: 'user_52DVySDrVoAFY5uEbQliT',
-    BLOG_URL: 'https://www.dablonyc.com'
+    BLOG_URL: 'https://www.blog-dab.vercel.app'
   },
   webpack(config, options) {
     config.resolve.modules.push(path.resolve("./"));
