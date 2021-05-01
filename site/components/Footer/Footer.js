@@ -34,11 +34,11 @@ export default function Footer(props) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
-          {/* <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group">
-            <Button>David Augustus Ball</Button>
-            <Button>About Me</Button>
-            <Button>Blog</Button>
-          </ButtonGroup> */}
+        {/* <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group">
+              <Button>David Augustus Ball</Button>
+              <Button>About Me</Button>
+              <Button>Blog</Button>
+            </ButtonGroup> */}
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
@@ -58,7 +58,7 @@ export default function Footer(props) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="/blog"
+                href="https://blog.dablonyc.com"
                 className={classes.block}
               >
                 Blog

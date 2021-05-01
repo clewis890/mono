@@ -220,7 +220,7 @@ export default function WorkSection() {
                           <p className="message-chars-left">{messageCharsLeft}</p>
                           </GridItem>
                           <DialogActions className={classes.modalFooter}>
-                            <p style={{ backgroundColor: 'unset', fontFamily: 'Garamond', padding: '12px', borderRadius: '6px', fontSize: '1.2em', color: 'yellow', textShadow: '2px 1px 5px black', fontWeight: '700', textTransform: 'uppercase' }} className="status-message">{statusMessage}</p>
+                            {/* <p style={{ backgroundColor: 'unset', fontFamily: 'Garamond', padding: '12px', borderRadius: '6px', fontSize: '1.2em', color: 'yellow', textShadow: '2px 1px 5px black', fontWeight: '700', textTransform: 'uppercase' }} className="status-message">{statusMessage}</p> */}
                               <button 
                                 type="submit" 
                                 className={classes.close}

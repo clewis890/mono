@@ -56,9 +56,7 @@ export default function HeaderLinks(props) {
             <Link href="/writing">
               <a className={classes.dropdownLink}>Writing</a>
             </Link>,
-            <Link href="https://blog.dablonyc.com" 
-            as="/blog"
-            >
+            <Link href="https://blog.dablonyc.com">
               <a className={classes.dropdownLink}>Blog</a>
             </Link>
           ]}

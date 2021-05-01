@@ -1,4 +1,5 @@
 import React from 'react'
+// import Link from 'next/link'
 import { footerStyles } from 'styles'
 
 /**
@@ -27,6 +28,11 @@ const Footer = () => (
           alt="Gray Prismic logo"
         />
       </a>
+    {/* <Link href="https://dablonyc.com">
+      <a>
+        Go back to Home page
+      </a>
+    </Link> */}
     </p>
     <style jsx global>{footerStyles}</style>
   </footer>
