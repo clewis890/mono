@@ -57,13 +57,14 @@ function reducer(state, action) {
   }
 }
 
-export default function WorkSection({ env }) {
+export default function WorkSection() {
   const [formState, dispatch] = useReducer(reducer, initialState); 
   const [classicModal, setClassicModal] = React.useState(false);
   const { register, handleSubmit, watch, errors } = useForm();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [feedback, setFeedback] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+    // const [feedback, setFeedback] = useState("");
+  const { name, email, subject, message } = formState;
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formSubmitSuccessful, setFormSubmitSuccessful] = useState(false);
   const [statusMessage, setStatusMessage] = useState(" ");
@@ -75,11 +76,11 @@ export default function WorkSection({ env }) {
   const message_html = watch('message_html') || "";
   const messageCharsLeft = 500 - message_html.length;
 
-  function sendEmail(e, icon, title) {    
+  function sendEmail(e) {    
     e.preventDefault();
 
-    emailjs.sendForm('gmail', process.env.TEMPLATE_ID, e.target, process.env.USER_ID)
-      .then((result) => {  
+    emailjs.sendForm('gmail', process.env.EMAILJS_TEMPLATE_ID, e.target, process.env.EMAILJS_USER_ID)
+      .then(() => {  
         setClassicModal(false);
         Swal.fire({
           timer: 10000,
@@ -88,7 +89,7 @@ export default function WorkSection({ env }) {
           title: 'Thanks!',
           text: 'Your message has been sent successfully!',
         });
-      }, (error) => {
+      }, () => {
           setClassicModal(false);
           Swal.fire({
             timer: 10000,
@@ -98,7 +99,7 @@ export default function WorkSection({ env }) {
             text: 'Something went wrong. Try again in a few minutes!',
           });
         });
-    e.target.reset();
+     e.target.reset();
   }
 
   return (
