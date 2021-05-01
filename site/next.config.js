@@ -13,15 +13,9 @@ module.exports = withPlugins([[withSass], [withImages]], {
     config.resolve.modules.push(path.resolve("./"));
     return config;
   },
-  async redirects() {
+  async rewrites() {
     return [
-      // {
-      //   source: '/:path*',
-      //   destination: `/:path*`,
-      // },
       {
-        // source: `${BLOG_URL}/blog`,
-        // destination: `/blog`,
         source: '/blog',
         destination: 'https://blog.dablonyc.com/',
         permanent: true,
