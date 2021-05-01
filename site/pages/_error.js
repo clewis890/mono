@@ -11,9 +11,11 @@ export default class _error extends Component {
   // }
   render() {
     return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '40px auto',}}>
       <h4>
         Sorry! There was an Error!
       </h4>
+      </div>
     )
   }
 }
