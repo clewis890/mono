@@ -52,7 +52,7 @@ export default function TeamSection() {
                     <GridItem xs={12} md={10} lg={6} xl={4}>
                         <h5 className={classes.description}>
                         As a litigator, he is no stranger to the civil, criminal, probate and family courts, and has argued and
-                        briefed a broad range of cases in federal and state courts of appeal, as well as taken several deathpenalty cases up to the U.S. Supreme Court. He has given advice on, written legal opinions and
+                        briefed a broad range of cases in federal and state courts of appeal, as well as taken several death penalty cases up to the U.S. Supreme Court. He has given advice on, written legal opinions and
                         arbitrated multimillion dollar construction disputes, drafted wills and planned estates, plotted
                         strategy on divorce and custody matters, and represented clients in a number of real estate and coop
                         sales and purchases.

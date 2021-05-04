@@ -27,19 +27,12 @@ export default function HeaderLinks(props) {
             className: classes.navLink,
             color: "transparent"
           }}
-          
           dropdownList={[
             <Link href="/about">
               <a className={classes.dropdownLink}>
                 About Me
               </a>
-            </Link>,
-            // <a
-            //   href="/writing"
-            //   className={classes.dropdownLink}
-            // >
-            //   Writing
-            // </a>
+            </Link>
           ]}
         />
       </ListItem>
@@ -61,42 +54,6 @@ export default function HeaderLinks(props) {
             </Link>
           ]}
         />
-      {/* <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="#"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip> 
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="#"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-       
-      </ListItem> */}
     </List>
   );
 }
