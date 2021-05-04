@@ -12,14 +12,5 @@ module.exports = withPlugins([[withSass], [withImages]], {
   webpack(config, options) {
     config.resolve.modules.push(path.resolve("./"));
     return config;
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/blog',
-        destination: 'https://blog.dablonyc.com/',
-        permanent: true,
-      },
-    ];
-  },
+  }
 });

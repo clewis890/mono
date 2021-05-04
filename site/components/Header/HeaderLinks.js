@@ -44,7 +44,6 @@ export default function HeaderLinks(props) {
             className: classes.navLink,
             color: "transparent"
           }}
-          
           dropdownList={[
             <Link href="/writing">
               <a className={classes.dropdownLink}>Writing</a>
