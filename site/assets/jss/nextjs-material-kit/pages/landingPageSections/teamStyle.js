@@ -20,8 +20,13 @@ const teamStyle = {
     marginRight: "auto"
   },
   cardTitle: {
+    width: 'fit-content',
     color: "#010103",
-    margin: "1.75rem 10px 0.875rem",
+    // margin: "1.75rem 10px 0.875rem",
+    backgroundColor: '#fff',
+    borderRadius: '6px',
+    padding: '10px',
+    margin: "15px auto 0 auto",
     textDecoration: "none",
     fontWeight: "700",
     fontFamily: `'EB Garamond', serif`,
