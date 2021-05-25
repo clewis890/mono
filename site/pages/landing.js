@@ -44,7 +44,7 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter responsive image={require("assets/img/newyork-unsplash.jpg")}>
+      <Parallax filter responsive image={require("assets/img/zach-miles-Y84-eo8drzk-unsplash.webp")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem item xs={12} sm={12} md={6}>

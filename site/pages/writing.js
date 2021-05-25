@@ -3,9 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
 // @material-ui/icons
-
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -14,11 +12,8 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage";
-
 // Sections for this page
-
 import Writing from "pages-sections/LandingPage-Sections/Writing.js"
 
 const dashboardRoutes = [];
@@ -42,7 +37,7 @@ export default function Law(props) {
         }}
         {...rest}
       />
-      <Parallax filter responsive image={require("assets/img/newyork-unsplash.jpg")}>
+      <Parallax filter responsive image={require("assets/img/zach-miles-Y84-eo8drzk-unsplash.webp")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6} style={{ display: 'contents' }}>
@@ -56,7 +51,7 @@ export default function Law(props) {
       style={{ backgroundColor: 'ivory' }}
       >
         <div className={classes.container}>
-        <Writing />
+          <Writing />
         </div>
       </div>
       <Footer />
