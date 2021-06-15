@@ -19,7 +19,7 @@ import styles from "assets/jss/nextjs-material-kit/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function Header(props) {
+export default function Header(props, href) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {

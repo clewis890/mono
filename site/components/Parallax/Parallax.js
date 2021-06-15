@@ -51,7 +51,8 @@ export default function Parallax(props) {
     [className]: className !== undefined
   });
   return (
-    <div className={parallaxClasses} style={{...style, backgroundImage: "url(" + image + ")", transform: transform}}>
+    <div className={parallaxClasses} 
+    style={{...style, backgroundImage: "url(" + image + ")", transform: transform }}>
       {children}
     </div>
   );

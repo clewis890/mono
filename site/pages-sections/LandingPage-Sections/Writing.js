@@ -45,7 +45,7 @@ export default function Writing() {
                   style={{  padding: '20px', margin: 'auto' }}
                     >
                         <h5 className={classes.description}>
-                            David is the author of Tryptich (Andalus Publishing, 2017), currently for sale on Amazon.
+                            David is the author of Triptych (Andalus Publishing, 2017), currently for sale on Amazon.
                         </h5>
                         <Button
                         color="success"
@@ -57,7 +57,7 @@ export default function Writing() {
                         noreferrer="true"
                         style={{ color: 'ivory', fontWeight: '500', fontSize: '1.2em' }}
                         >
-                            Buy Tryptich <br />Now on Amazon!
+                            Buy Triptych <br />Now on Amazon!
                         </a>
                         </Button> 
                     </GridItem>

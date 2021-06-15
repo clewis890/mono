@@ -9,6 +9,8 @@ import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/teamStyle.js";
 import placeholder from "assets/img/placeholder.jpg";
+import headshot from "assets/img/davidballheadshot.jpg";
+import Image from 'next/image'
 
 const useStyles = makeStyles(styles);
 
@@ -28,7 +30,7 @@ export default function TeamSection() {
         <GridContainer>
             <Card plain>
               <GridItem xs={8} sm={8} md={4} className={classes.itemGrid}>
-                <img src={placeholder} alt="..." className={imageClasses} />
+                <Image src={headshot} height="400" width="350" alt="David Ball Headshot" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 David Augustus Ball
